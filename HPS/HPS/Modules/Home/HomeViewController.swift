@@ -10,6 +10,9 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var presenter: HomeViewToPresenterProtocol?
     
     override func viewDidLoad() {
