@@ -8,12 +8,16 @@
 
 import UIKit
 
-protocol HomePresenterToViewProtocol: class{}
+protocol HomePresenterToViewProtocol: class{
+    var tableView: UITableView! {get set}
+    var searchBar: UISearchBar! {get set}
+}
 
 protocol HomeInteractorToPresenterProtocol: class{}
 
 protocol HomePresenterToInteractorProtocol: class{
-    var presenter: HomeInteractorToPresenterProtocol? {get set}    
+    var presenter: HomeInteractorToPresenterProtocol? {get set}
+    func fetchArtist(input: String)
 }
 
 protocol HomeViewToPresenterProtocol: class{
@@ -22,6 +26,7 @@ protocol HomeViewToPresenterProtocol: class{
     var router: HomePresenterToRouterProtocol? {get set}
     func loadView()
     func updateView()
+    func search(input: String)
 }
 
 protocol HomePresenterToRouterProtocol: class{

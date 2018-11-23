@@ -29,4 +29,17 @@ class HomeViewController: UIViewController {
     
 }
 
+extension HomeViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {        
+        if let input = searchBar.text {
+            presenter?.search(input: input)
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print("cancel button")
+    }
+}
+
 extension HomeViewController: HomePresenterToViewProtocol {}

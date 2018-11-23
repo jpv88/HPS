@@ -15,12 +15,16 @@ class HomePresenter: HomeViewToPresenterProtocol {
     var router: HomePresenterToRouterProtocol?
 
     func loadView() {
-        
+        view?.searchBar.delegate = view as? UISearchBarDelegate
     }
     
     func updateView() {
         guard let view = view as? UIViewController else {return}
         view.title = "Home"
+    }
+    
+    func search(input: String) {
+        
     }
     
 }

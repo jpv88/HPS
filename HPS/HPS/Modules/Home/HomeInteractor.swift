@@ -11,4 +11,8 @@ import UIKit
 class HomeInteractor: HomePresenterToInteractorProtocol{
     
     var presenter: HomeInteractorToPresenterProtocol?
+    
+    func fetchArtist(input: String) {
+        
+    }
 }
