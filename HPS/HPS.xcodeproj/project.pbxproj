@@ -12,6 +12,13 @@
 		7F1FD82321A86C8B00C5234D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1FD82121A86C8B00C5234D /* Main.storyboard */; };
 		7F1FD82521A86C8F00C5234D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F1FD82421A86C8F00C5234D /* Assets.xcassets */; };
 		7F1FD82821A86C8F00C5234D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1FD82621A86C8F00C5234D /* LaunchScreen.storyboard */; };
+		7FFC8E5121A873EB0074813E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E4B21A873EB0074813E /* HomePresenter.swift */; };
+		7FFC8E5221A873EB0074813E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E4C21A873EB0074813E /* HomeRouter.swift */; };
+		7FFC8E5321A873EB0074813E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E4D21A873EB0074813E /* HomeViewController.swift */; };
+		7FFC8E5421A873EB0074813E /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E4E21A873EB0074813E /* HomeProtocols.swift */; };
+		7FFC8E5521A873EB0074813E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E4F21A873EB0074813E /* HomeInteractor.swift */; };
+		7FFC8E5621A873EB0074813E /* HomeEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E5021A873EB0074813E /* HomeEntities.swift */; };
+		7FFC8E5821A8750A0074813E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFC8E5721A8750A0074813E /* HomeViewController.xib */; };
 		E2BC3F7CF2261E83F69D6F93 /* Pods_HPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA34B0CD456096F65212DB8 /* Pods_HPS.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +32,13 @@
 		7F1FD82421A86C8F00C5234D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F1FD82721A86C8F00C5234D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F1FD82921A86C8F00C5234D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FFC8E4B21A873EB0074813E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		7FFC8E4C21A873EB0074813E /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		7FFC8E4D21A873EB0074813E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7FFC8E4E21A873EB0074813E /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		7FFC8E4F21A873EB0074813E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		7FFC8E5021A873EB0074813E /* HomeEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntities.swift; sourceTree = "<group>"; };
+		7FFC8E5721A8750A0074813E /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		DD7C88BCB7683ECAEE381EB2 /* Pods-HPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPS/Pods-HPS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +75,7 @@
 		7F1FD81C21A86C8B00C5234D /* HPS */ = {
 			isa = PBXGroup;
 			children = (
+				7FFC8E4921A873C60074813E /* Modules */,
 				7F1FD81D21A86C8B00C5234D /* AppDelegate.swift */,
 				7F1FD81F21A86C8B00C5234D /* ViewController.swift */,
 				7F1FD82121A86C8B00C5234D /* Main.storyboard */,
@@ -69,6 +84,28 @@
 				7F1FD82921A86C8F00C5234D /* Info.plist */,
 			);
 			path = HPS;
+			sourceTree = "<group>";
+		};
+		7FFC8E4921A873C60074813E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7FFC8E4A21A873CF0074813E /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7FFC8E4A21A873CF0074813E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7FFC8E4B21A873EB0074813E /* HomePresenter.swift */,
+				7FFC8E4C21A873EB0074813E /* HomeRouter.swift */,
+				7FFC8E4D21A873EB0074813E /* HomeViewController.swift */,
+				7FFC8E4E21A873EB0074813E /* HomeProtocols.swift */,
+				7FFC8E4F21A873EB0074813E /* HomeInteractor.swift */,
+				7FFC8E5021A873EB0074813E /* HomeEntities.swift */,
+				7FFC8E5721A8750A0074813E /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		E1492274317B8F65C08F975A /* Pods */ = {
@@ -151,6 +188,7 @@
 				7F1FD82821A86C8F00C5234D /* LaunchScreen.storyboard in Resources */,
 				7F1FD82521A86C8F00C5234D /* Assets.xcassets in Resources */,
 				7F1FD82321A86C8B00C5234D /* Main.storyboard in Resources */,
+				7FFC8E5821A8750A0074813E /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,8 +238,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFC8E5321A873EB0074813E /* HomeViewController.swift in Sources */,
+				7FFC8E5121A873EB0074813E /* HomePresenter.swift in Sources */,
+				7FFC8E5221A873EB0074813E /* HomeRouter.swift in Sources */,
+				7FFC8E5621A873EB0074813E /* HomeEntities.swift in Sources */,
 				7F1FD82021A86C8B00C5234D /* ViewController.swift in Sources */,
+				7FFC8E5421A873EB0074813E /* HomeProtocols.swift in Sources */,
 				7F1FD81E21A86C8B00C5234D /* AppDelegate.swift in Sources */,
+				7FFC8E5521A873EB0074813E /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +395,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2AUK3F279;
 				INFOPLIST_FILE = HPS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jpv.hps.es.HPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -367,7 +414,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2AUK3F279;
 				INFOPLIST_FILE = HPS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jpv.hps.es.HPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
