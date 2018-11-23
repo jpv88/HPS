@@ -27,6 +27,14 @@ class HomeViewController: UIViewController {
         presenter?.updateView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        WebService.loadFromWebService()
+        let ws = WebService()
+        ws.loadFromWebService(type: ItunesSearchServiceModel.self, endpoint: Endpoint.term(artist: "Jack Johnson"))
+    }
+    
 }
 
 extension HomeViewController: UISearchBarDelegate {

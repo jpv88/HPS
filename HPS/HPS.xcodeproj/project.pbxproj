@@ -24,6 +24,11 @@
 		7FFC8E6421A879080074813E /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E5E21A879080074813E /* DetailInteractor.swift */; };
 		7FFC8E6521A879080074813E /* DetailEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E5F21A879080074813E /* DetailEntities.swift */; };
 		7FFC8E6721A8799E0074813E /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFC8E6621A8799E0074813E /* DetailViewController.xib */; };
+		7FFC8E7B21A889640074813E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E7A21A889640074813E /* WebService.swift */; };
+		7FFC8E7F21A895CE0074813E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E7E21A895CE0074813E /* Constants.swift */; };
+		7FFC8E8121A897EF0074813E /* TermNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8021A897EF0074813E /* TermNetwork.swift */; };
+		7FFC8E8321A898D00074813E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8221A898D00074813E /* Endpoint.swift */; };
+		7FFC8E8521A8A0180074813E /* ItunesSearchServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8421A8A0180074813E /* ItunesSearchServiceModel.swift */; };
 		E2BC3F7CF2261E83F69D6F93 /* Pods_HPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA34B0CD456096F65212DB8 /* Pods_HPS.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +54,11 @@
 		7FFC8E5E21A879080074813E /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		7FFC8E5F21A879080074813E /* DetailEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEntities.swift; sourceTree = "<group>"; };
 		7FFC8E6621A8799E0074813E /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		7FFC8E7A21A889640074813E /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		7FFC8E7E21A895CE0074813E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7FFC8E8021A897EF0074813E /* TermNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermNetwork.swift; sourceTree = "<group>"; };
+		7FFC8E8221A898D00074813E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		7FFC8E8421A8A0180074813E /* ItunesSearchServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchServiceModel.swift; sourceTree = "<group>"; };
 		DD7C88BCB7683ECAEE381EB2 /* Pods-HPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPS/Pods-HPS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +100,7 @@
 				7F1FD81D21A86C8B00C5234D /* AppDelegate.swift */,
 				7F1FD82621A86C8F00C5234D /* LaunchScreen.storyboard */,
 				7F1FD82921A86C8F00C5234D /* Info.plist */,
+				7FFC8E7E21A895CE0074813E /* Constants.swift */,
 			);
 			path = HPS;
 			sourceTree = "<group>";
@@ -145,6 +156,8 @@
 		7FFC8E7721A888CC0074813E /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				7FFC8E7A21A889640074813E /* WebService.swift */,
+				7FFC8E8221A898D00074813E /* Endpoint.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -152,6 +165,7 @@
 		7FFC8E7821A888D40074813E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7FFC8E8421A8A0180074813E /* ItunesSearchServiceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +173,7 @@
 		7FFC8E7921A888D90074813E /* EndPoints */ = {
 			isa = PBXGroup;
 			children = (
+				7FFC8E8021A897EF0074813E /* TermNetwork.swift */,
 			);
 			path = EndPoints;
 			sourceTree = "<group>";
@@ -295,16 +310,21 @@
 			files = (
 				7FFC8E5321A873EB0074813E /* HomeViewController.swift in Sources */,
 				7FFC8E6321A879080074813E /* DetailProtocols.swift in Sources */,
+				7FFC8E7B21A889640074813E /* WebService.swift in Sources */,
 				7FFC8E5121A873EB0074813E /* HomePresenter.swift in Sources */,
 				7FFC8E6421A879080074813E /* DetailInteractor.swift in Sources */,
+				7FFC8E7F21A895CE0074813E /* Constants.swift in Sources */,
 				7FFC8E5221A873EB0074813E /* HomeRouter.swift in Sources */,
 				7FFC8E6021A879080074813E /* DetailPresenter.swift in Sources */,
 				7FFC8E5621A873EB0074813E /* HomeEntities.swift in Sources */,
+				7FFC8E8521A8A0180074813E /* ItunesSearchServiceModel.swift in Sources */,
 				7FFC8E5421A873EB0074813E /* HomeProtocols.swift in Sources */,
 				7FFC8E6121A879080074813E /* DetailRouter.swift in Sources */,
 				7FFC8E6221A879080074813E /* DetailViewController.swift in Sources */,
 				7F1FD81E21A86C8B00C5234D /* AppDelegate.swift in Sources */,
 				7FFC8E5521A873EB0074813E /* HomeInteractor.swift in Sources */,
+				7FFC8E8121A897EF0074813E /* TermNetwork.swift in Sources */,
+				7FFC8E8321A898D00074813E /* Endpoint.swift in Sources */,
 				7FFC8E6521A879080074813E /* DetailEntities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
