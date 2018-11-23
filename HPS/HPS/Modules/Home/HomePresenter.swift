@@ -13,10 +13,16 @@ class HomePresenter: HomeViewToPresenterProtocol {
     var view: HomePresenterToViewProtocol?
     var interactor: HomePresenterToInteractorProtocol?
     var router: HomePresenterToRouterProtocol?
-    
-    func updateView() {
+
+    func loadView() {
         
     }
+    
+    func updateView() {
+        guard let view = view as? UIViewController else {return}
+        view.title = "Home"
+    }
+    
 }
 
 extension HomePresenter: HomeInteractorToPresenterProtocol {}

@@ -20,6 +20,7 @@ protocol HomeViewToPresenterProtocol: class{
     var view: HomePresenterToViewProtocol? {get set}
     var interactor: HomePresenterToInteractorProtocol? {get set}
     var router: HomePresenterToRouterProtocol? {get set}
+    func loadView()
     func updateView()
 }
 
