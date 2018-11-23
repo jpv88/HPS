@@ -97,6 +97,7 @@
 		7FFC8E4921A873C60074813E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7FFC8E7621A888A70074813E /* NetworkLayer */,
 				7FFC8E5921A878EF0074813E /* Detail */,
 				7FFC8E4A21A873CF0074813E /* Home */,
 			);
@@ -129,6 +130,37 @@
 				7FFC8E6621A8799E0074813E /* DetailViewController.xib */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		7FFC8E7621A888A70074813E /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7FFC8E7921A888D90074813E /* EndPoints */,
+				7FFC8E7821A888D40074813E /* Models */,
+				7FFC8E7721A888CC0074813E /* Configuration */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		7FFC8E7721A888CC0074813E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		7FFC8E7821A888D40074813E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7FFC8E7921A888D90074813E /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EndPoints;
 			sourceTree = "<group>";
 		};
 		E1492274317B8F65C08F975A /* Pods */ = {
