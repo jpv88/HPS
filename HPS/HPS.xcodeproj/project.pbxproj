@@ -29,6 +29,9 @@
 		7FFC8E8121A897EF0074813E /* TermNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8021A897EF0074813E /* TermNetwork.swift */; };
 		7FFC8E8321A898D00074813E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8221A898D00074813E /* Endpoint.swift */; };
 		7FFC8E8521A8A0180074813E /* ItunesSearchServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8421A8A0180074813E /* ItunesSearchServiceModel.swift */; };
+		7FFC8E8921A9A9450074813E /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8821A9A9450074813E /* ErrorHandler.swift */; };
+		7FFC8E8B21A9A9990074813E /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8A21A9A9990074813E /* UIApplication+TopViewController.swift */; };
+		7FFC8E8D21A9AA0C0074813E /* UIViewController+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8C21A9AA0C0074813E /* UIViewController+ActivityIndicator.swift */; };
 		E2BC3F7CF2261E83F69D6F93 /* Pods_HPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA34B0CD456096F65212DB8 /* Pods_HPS.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,9 @@
 		7FFC8E8021A897EF0074813E /* TermNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermNetwork.swift; sourceTree = "<group>"; };
 		7FFC8E8221A898D00074813E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		7FFC8E8421A8A0180074813E /* ItunesSearchServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchServiceModel.swift; sourceTree = "<group>"; };
+		7FFC8E8821A9A9450074813E /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		7FFC8E8A21A9A9990074813E /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
+		7FFC8E8C21A9AA0C0074813E /* UIViewController+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		DD7C88BCB7683ECAEE381EB2 /* Pods-HPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPS/Pods-HPS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,12 +101,14 @@
 		7F1FD81C21A86C8B00C5234D /* HPS */ = {
 			isa = PBXGroup;
 			children = (
+				7FFC8E8721A9A9210074813E /* Base */,
+				7FFC8E8621A9A9140074813E /* Commons */,
+				7FFC8E7621A888A70074813E /* NetworkLayer */,
 				7FFC8E4921A873C60074813E /* Modules */,
 				7F1FD82421A86C8F00C5234D /* Assets.xcassets */,
 				7F1FD81D21A86C8B00C5234D /* AppDelegate.swift */,
 				7F1FD82621A86C8F00C5234D /* LaunchScreen.storyboard */,
 				7F1FD82921A86C8F00C5234D /* Info.plist */,
-				7FFC8E7E21A895CE0074813E /* Constants.swift */,
 			);
 			path = HPS;
 			sourceTree = "<group>";
@@ -108,7 +116,6 @@
 		7FFC8E4921A873C60074813E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				7FFC8E7621A888A70074813E /* NetworkLayer */,
 				7FFC8E5921A878EF0074813E /* Detail */,
 				7FFC8E4A21A873CF0074813E /* Home */,
 			);
@@ -150,7 +157,8 @@
 				7FFC8E7821A888D40074813E /* Models */,
 				7FFC8E7721A888CC0074813E /* Configuration */,
 			);
-			path = NetworkLayer;
+			name = NetworkLayer;
+			path = Modules/NetworkLayer;
 			sourceTree = "<group>";
 		};
 		7FFC8E7721A888CC0074813E /* Configuration */ = {
@@ -176,6 +184,24 @@
 				7FFC8E8021A897EF0074813E /* TermNetwork.swift */,
 			);
 			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		7FFC8E8621A9A9140074813E /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				7FFC8E8821A9A9450074813E /* ErrorHandler.swift */,
+				7FFC8E8A21A9A9990074813E /* UIApplication+TopViewController.swift */,
+				7FFC8E8C21A9AA0C0074813E /* UIViewController+ActivityIndicator.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		7FFC8E8721A9A9210074813E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7FFC8E7E21A895CE0074813E /* Constants.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		E1492274317B8F65C08F975A /* Pods */ = {
@@ -310,6 +336,8 @@
 			files = (
 				7FFC8E5321A873EB0074813E /* HomeViewController.swift in Sources */,
 				7FFC8E6321A879080074813E /* DetailProtocols.swift in Sources */,
+				7FFC8E8921A9A9450074813E /* ErrorHandler.swift in Sources */,
+				7FFC8E8D21A9AA0C0074813E /* UIViewController+ActivityIndicator.swift in Sources */,
 				7FFC8E7B21A889640074813E /* WebService.swift in Sources */,
 				7FFC8E5121A873EB0074813E /* HomePresenter.swift in Sources */,
 				7FFC8E6421A879080074813E /* DetailInteractor.swift in Sources */,
@@ -322,6 +350,7 @@
 				7FFC8E6121A879080074813E /* DetailRouter.swift in Sources */,
 				7FFC8E6221A879080074813E /* DetailViewController.swift in Sources */,
 				7F1FD81E21A86C8B00C5234D /* AppDelegate.swift in Sources */,
+				7FFC8E8B21A9A9990074813E /* UIApplication+TopViewController.swift in Sources */,
 				7FFC8E5521A873EB0074813E /* HomeInteractor.swift in Sources */,
 				7FFC8E8121A897EF0074813E /* TermNetwork.swift in Sources */,
 				7FFC8E8321A898D00074813E /* Endpoint.swift in Sources */,

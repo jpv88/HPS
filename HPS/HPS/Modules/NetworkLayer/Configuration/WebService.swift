@@ -22,11 +22,16 @@ class WebService {
     }
     
     func loadFromWebService<T>(type: T.Type, endpoint: Endpoint, completionHandler: @escaping (ItunesSearchServiceModel) -> Void, errorHandler: @escaping (Error) -> Void) {
-        // show indicator
+        
+        let vc = UIApplication.topViewController()
+        vc?.showLoader()
+        
         let myRequest = endpoint.getRequest
 
         Alamofire.request(myRequest.path, method: myRequest.method, parameters: myRequest.parameters, encoding: JSONEncoding.default, headers: Constant.Base.headers).responseJSON { response in
-            // hide indicator
+            
+            vc?.hideLoader()
+            
             switch response.result {
             case .success( _):
                 do {
