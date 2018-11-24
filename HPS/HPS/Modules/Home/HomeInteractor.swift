@@ -12,11 +12,13 @@ class HomeInteractor: HomePresenterToInteractorProtocol{
     
     var presenter: HomeInteractorToPresenterProtocol?
     
-    private let webService = WebService()
+    private let webService = WebService()    
+    private var data: ItunesSearchServiceModel?
     
     func fetchArtist(input: String) {
         
         webService.loadFromWebService(type: ItunesSearchServiceModel.self, endpoint: .term(artist: "Jack Jonhson"), completionHandler: { result in
+            self.data = result
             self.presenter?.fetchSuccess(model: result)
         }) { error in
             self.presenter?.fetchFail(error: error)

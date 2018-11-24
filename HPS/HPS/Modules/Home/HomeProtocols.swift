@@ -11,6 +11,7 @@ import UIKit
 protocol HomePresenterToViewProtocol: class{
     var tableView: UITableView! {get set}
     var searchBar: UISearchBar! {get set}
+    func refreshView(model: ItunesSearchServiceModel)
 }
 
 protocol HomeInteractorToPresenterProtocol: class{

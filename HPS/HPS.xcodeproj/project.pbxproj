@@ -32,6 +32,9 @@
 		7FFC8E8921A9A9450074813E /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8821A9A9450074813E /* ErrorHandler.swift */; };
 		7FFC8E8B21A9A9990074813E /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8A21A9A9990074813E /* UIApplication+TopViewController.swift */; };
 		7FFC8E8D21A9AA0C0074813E /* UIViewController+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8C21A9AA0C0074813E /* UIViewController+ActivityIndicator.swift */; };
+		7FFC8E9121A9B2750074813E /* ItunesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8F21A9B2750074813E /* ItunesTableViewCell.swift */; };
+		7FFC8E9221A9B2750074813E /* ItunesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFC8E9021A9B2750074813E /* ItunesTableViewCell.xib */; };
+		7FFC8E9421A9B58E0074813E /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E9321A9B58E0074813E /* UITableViewCell+Identifier.swift */; };
 		E2BC3F7CF2261E83F69D6F93 /* Pods_HPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA34B0CD456096F65212DB8 /* Pods_HPS.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,9 @@
 		7FFC8E8821A9A9450074813E /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		7FFC8E8A21A9A9990074813E /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
 		7FFC8E8C21A9AA0C0074813E /* UIViewController+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActivityIndicator.swift"; sourceTree = "<group>"; };
+		7FFC8E8F21A9B2750074813E /* ItunesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesTableViewCell.swift; sourceTree = "<group>"; };
+		7FFC8E9021A9B2750074813E /* ItunesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItunesTableViewCell.xib; sourceTree = "<group>"; };
+		7FFC8E9321A9B58E0074813E /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
 		DD7C88BCB7683ECAEE381EB2 /* Pods-HPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPS/Pods-HPS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,9 +195,11 @@
 		7FFC8E8621A9A9140074813E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				7FFC8E8E21A9B2580074813E /* Cells */,
 				7FFC8E8821A9A9450074813E /* ErrorHandler.swift */,
 				7FFC8E8A21A9A9990074813E /* UIApplication+TopViewController.swift */,
 				7FFC8E8C21A9AA0C0074813E /* UIViewController+ActivityIndicator.swift */,
+				7FFC8E9321A9B58E0074813E /* UITableViewCell+Identifier.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -202,6 +210,15 @@
 				7FFC8E7E21A895CE0074813E /* Constants.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		7FFC8E8E21A9B2580074813E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7FFC8E8F21A9B2750074813E /* ItunesTableViewCell.swift */,
+				7FFC8E9021A9B2750074813E /* ItunesTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E1492274317B8F65C08F975A /* Pods */ = {
@@ -285,6 +302,7 @@
 				7F1FD82521A86C8F00C5234D /* Assets.xcassets in Resources */,
 				7FFC8E5821A8750A0074813E /* HomeViewController.xib in Resources */,
 				7FFC8E6721A8799E0074813E /* DetailViewController.xib in Resources */,
+				7FFC8E9221A9B2750074813E /* ItunesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FFC8E5321A873EB0074813E /* HomeViewController.swift in Sources */,
+				7FFC8E9121A9B2750074813E /* ItunesTableViewCell.swift in Sources */,
 				7FFC8E6321A879080074813E /* DetailProtocols.swift in Sources */,
 				7FFC8E8921A9A9450074813E /* ErrorHandler.swift in Sources */,
 				7FFC8E8D21A9AA0C0074813E /* UIViewController+ActivityIndicator.swift in Sources */,
@@ -350,6 +369,7 @@
 				7FFC8E6121A879080074813E /* DetailRouter.swift in Sources */,
 				7FFC8E6221A879080074813E /* DetailViewController.swift in Sources */,
 				7F1FD81E21A86C8B00C5234D /* AppDelegate.swift in Sources */,
+				7FFC8E9421A9B58E0074813E /* UITableViewCell+Identifier.swift in Sources */,
 				7FFC8E8B21A9A9990074813E /* UIApplication+TopViewController.swift in Sources */,
 				7FFC8E5521A873EB0074813E /* HomeInteractor.swift in Sources */,
 				7FFC8E8121A897EF0074813E /* TermNetwork.swift in Sources */,

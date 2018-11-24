@@ -24,4 +24,7 @@ struct Result: Codable {
     let artistViewUrl, collectionViewUrl, trackViewUrl: String?
     let previewUrl: String?
     let artworkUrl30, artworkUrl60, artworkUrl100: String?
+    let trackPrice: Double?
+    let primaryGenreName: String?
+    let trackTimeMillis: Int?
 }

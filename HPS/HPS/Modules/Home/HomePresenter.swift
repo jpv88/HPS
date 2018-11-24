@@ -15,7 +15,12 @@ class HomePresenter: HomeViewToPresenterProtocol {
     var router: HomePresenterToRouterProtocol?
 
     func loadView() {
-        view?.searchBar.delegate = view as? UISearchBarDelegate        
+        view?.searchBar.delegate = view as? UISearchBarDelegate
+        view?.tableView.delegate = view as? UITableViewDelegate
+        view?.tableView.dataSource = view as? UITableViewDataSource
+        view?.tableView.bounces = false
+        view?.tableView.register(UINib(nibName: ItunesTableViewCell.getIdentifier(), bundle: nil), forCellReuseIdentifier: ItunesTableViewCell.getIdentifier())
+        view?.tableView.tableFooterView = UIView()
     }
     
     func updateView() {
@@ -31,7 +36,7 @@ class HomePresenter: HomeViewToPresenterProtocol {
 
 extension HomePresenter: HomeInteractorToPresenterProtocol {
     func fetchSuccess(model: ItunesSearchServiceModel) {
-        
+        view?.refreshView(model: model)
     }
     
     func fetchFail(error: Error) {
