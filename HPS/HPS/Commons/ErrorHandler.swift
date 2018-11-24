@@ -18,7 +18,7 @@ final class ErrorHandler {
         let dismissButton = UIAlertAction(title: dismissButtonTitle, style: .cancel) { _ in
             dismissAction?()
         }
-        alertView.title = "HCR Error"
+        alertView.title = "HPS Error"
         alertView.message = error.localizedDescription
         alertView.addAction(firstButton)
         alertView.addAction(dismissButton)

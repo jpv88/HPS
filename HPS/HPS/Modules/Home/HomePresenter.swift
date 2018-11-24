@@ -15,7 +15,7 @@ class HomePresenter: HomeViewToPresenterProtocol {
     var router: HomePresenterToRouterProtocol?
 
     func loadView() {
-        view?.searchBar.delegate = view as? UISearchBarDelegate
+        view?.searchBar.delegate = view as? UISearchBarDelegate        
     }
     
     func updateView() {
@@ -24,9 +24,17 @@ class HomePresenter: HomeViewToPresenterProtocol {
     }
     
     func search(input: String) {
-        
+        interactor?.fetchArtist(input: input)
     }
     
 }
 
-extension HomePresenter: HomeInteractorToPresenterProtocol {}
+extension HomePresenter: HomeInteractorToPresenterProtocol {
+    func fetchSuccess(model: ItunesSearchServiceModel) {
+        
+    }
+    
+    func fetchFail(error: Error) {
+        ErrorHandler.showError(error: error)
+    }
+}

@@ -49,32 +49,5 @@ class WebService {
             }
         }
     }
-    
-//    class func loadFromWebService() {
-//
-//        Alamofire.request("https://itunes.apple.com/search?term=jack+johnson", method: .post, parameters: nil,
-//                          encoding: JSONEncoding.default, headers: Constant.Base.headers).responseJSON { response in
-//
-//                            switch response.result {
-//                            case .success(let JSON):
-//                                print("Success with JSON: \(JSON)")
-//                                do {
-//                                    if let data = response.data as? Data, let obj = try? decoder.decode(ItunesSearchServiceModel.self, from: data) {
-//                                        print(obj)
-//                                    } else {
-//                                        throw MyCustomError.NotParsedModel("Model could not be parsed")
-//                                    }
-//                                }
-//                                catch {
-//                                    // return completion error
-//                                    print("Something Wrong! \(error)")
-//                                }
-//
-//                            case .failure(let error):
-//                                // return completion error
-//                                break
-//                            }
-//
-//    }
-//    }
+  
 }

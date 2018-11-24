@@ -13,7 +13,10 @@ protocol HomePresenterToViewProtocol: class{
     var searchBar: UISearchBar! {get set}
 }
 
-protocol HomeInteractorToPresenterProtocol: class{}
+protocol HomeInteractorToPresenterProtocol: class{
+    func fetchSuccess(model: ItunesSearchServiceModel)
+    func fetchFail(error: Error)
+}
 
 protocol HomePresenterToInteractorProtocol: class{
     var presenter: HomeInteractorToPresenterProtocol? {get set}
