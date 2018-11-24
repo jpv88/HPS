@@ -22,12 +22,21 @@ class ItunesTableViewCell: UITableViewCell {
         selectionStyle = .none
     }
 
-    func displayData(song: String, artist: String, duration: String, genre: String, price: String) {
-        songTitleLabel.text = song
-        artistTitleLabel.text = artist
-        durationTitleLabel.text = duration
-        genreTitleLabel.text = genre
-        priceTitleLabel.text = price
+    func displayData(model: Result) {
+        let song = model.trackCensoredName ?? ""
+        let artist = model.artistName ?? ""
+        var duration = "0"
+        if let miliseconds = model.trackTimeMillis, miliseconds != 0 {
+            duration = TimeInterval(miliseconds).stringTime
+        }
+        let genre = model.primaryGenreName ?? ""
+        let price = model.trackPrice ?? 0.0
+        
+        self.songTitleLabel.text = song
+        self.artistTitleLabel.text = artist
+        self.durationTitleLabel.text = duration
+        self.genreTitleLabel.text = genre
+        self.priceTitleLabel.text = "\(price)"        
     }
     
 }

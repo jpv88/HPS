@@ -55,7 +55,11 @@ class HomePresenter: HomeViewToPresenterProtocol {
 
 extension HomePresenter: HomeInteractorToPresenterProtocol {
     func fetchSuccess(model: ItunesSearchServiceModel) {
-        view?.refreshView(model: model)
+        if let count = model.resultCount, count != 0 {
+            view?.refreshView(model: model)
+        } else {
+            ErrorHandler.showAlert(title: "No results", msg: "Try another input")
+        }
     }
     
     func fetchFail(error: Error) {

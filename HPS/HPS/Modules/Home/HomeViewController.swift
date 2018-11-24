@@ -66,15 +66,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ItunesTableViewCell.getIdentifier(), for: indexPath) as? ItunesTableViewCell else { return UITableViewCell() }
         guard let model = data, let results = model.results else {return UITableViewCell()}
         let object = results[indexPath.row]
-        let song = object.trackCensoredName ?? ""
-        let artist = object.artistName ?? ""
-        var duration = "0"
-        if let miliseconds = object.trackTimeMillis, miliseconds != 0 {
-            duration = TimeInterval(miliseconds).stringTime
-        }
-        let genre = object.primaryGenreName ?? ""
-        let price = object.trackPrice ?? 0.0
-        cell.displayData(song: song, artist: artist, duration: "\(duration)", genre: genre, price: "\(price)")
+        cell.displayData(model: object)    
         return cell
     }
     
