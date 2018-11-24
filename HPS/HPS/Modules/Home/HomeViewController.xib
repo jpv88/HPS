@@ -33,20 +33,59 @@
                         <string>Title</string>
                     </scopeButtonTitles>
                 </searchBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYY-ga-Qbg" userLabel="FilterLabel">
+                    <rect key="frame" x="16" y="91" width="66" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="66" id="Nvr-W7-ujO"/>
+                        <constraint firstAttribute="height" constant="21" id="wFd-Er-k7F"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uA-Cl-MWw" userLabel="DurationButton">
+                    <rect key="frame" x="97" y="86.5" width="59" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="idC-7g-VIs"/>
+                    </constraints>
+                    <state key="normal" title="Duration"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqt-pk-2dk" userLabel="GenreButton">
+                    <rect key="frame" x="171" y="86.5" width="42" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="zHi-Uj-z7K"/>
+                    </constraints>
+                    <state key="normal" title="Genre"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uri-9U-Vsw" userLabel="PriceButton">
+                    <rect key="frame" x="228" y="86.5" width="35" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="rhf-Oc-7VM"/>
+                    </constraints>
+                    <state key="normal" title="Price"/>
+                </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2gv-wE-iYg">
-                    <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                    <rect key="frame" x="0.0" y="127" width="375" height="540"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="2gv-wE-iYg" firstAttribute="top" secondItem="bSP-r4-d4e" secondAttribute="bottom" id="2ib-Ow-G5O"/>
+                <constraint firstItem="NYY-ga-Qbg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="0aX-b2-vX1"/>
+                <constraint firstItem="2gv-wE-iYg" firstAttribute="top" secondItem="NYY-ga-Qbg" secondAttribute="bottom" constant="15" id="2ib-Ow-G5O"/>
                 <constraint firstItem="bSP-r4-d4e" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4ZD-7c-UVZ"/>
+                <constraint firstItem="0uA-Cl-MWw" firstAttribute="leading" secondItem="NYY-ga-Qbg" secondAttribute="trailing" constant="15" id="5Mj-1p-vEF"/>
+                <constraint firstItem="0uA-Cl-MWw" firstAttribute="centerY" secondItem="NYY-ga-Qbg" secondAttribute="centerY" id="6aN-6N-d8b"/>
+                <constraint firstItem="Uri-9U-Vsw" firstAttribute="leading" secondItem="Lqt-pk-2dk" secondAttribute="trailing" constant="15" id="BHd-QO-Yc0"/>
                 <constraint firstItem="bSP-r4-d4e" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="KMk-wA-Rdr"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2gv-wE-iYg" secondAttribute="trailing" id="RqQ-1R-sLk"/>
+                <constraint firstItem="NYY-ga-Qbg" firstAttribute="top" secondItem="bSP-r4-d4e" secondAttribute="bottom" constant="15" id="Sf2-9B-lHG"/>
+                <constraint firstItem="Lqt-pk-2dk" firstAttribute="leading" secondItem="0uA-Cl-MWw" secondAttribute="trailing" constant="15" id="U54-VB-NTd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2gv-wE-iYg" secondAttribute="bottom" id="VqL-dm-NvS"/>
                 <constraint firstItem="bSP-r4-d4e" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="cLu-V0-pbS"/>
+                <constraint firstItem="Lqt-pk-2dk" firstAttribute="centerY" secondItem="0uA-Cl-MWw" secondAttribute="centerY" id="dz7-K6-GiN"/>
                 <constraint firstItem="2gv-wE-iYg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="k0M-Md-ZtG"/>
+                <constraint firstItem="Uri-9U-Vsw" firstAttribute="centerY" secondItem="Lqt-pk-2dk" secondAttribute="centerY" id="pNM-eD-wWe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>

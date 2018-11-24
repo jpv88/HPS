@@ -41,7 +41,7 @@ extension HomeViewController: UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        print("cancel button")
+        view.endEditing(true)
     }
 }
 
