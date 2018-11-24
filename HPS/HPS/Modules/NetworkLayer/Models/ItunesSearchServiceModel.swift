@@ -12,7 +12,7 @@ import Foundation
 
 struct ItunesSearchServiceModel: Codable {
     let resultCount: Int?
-    let results: [Result]?
+    var results: [Result]?
 }
 
 struct Result: Codable {

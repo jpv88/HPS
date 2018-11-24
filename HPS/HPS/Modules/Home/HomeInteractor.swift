@@ -26,7 +26,7 @@ class HomeInteractor: HomePresenterToInteractorProtocol{
     }
     
     func filter(by: FilterModel) {
-        guard let result = data, let _ = result.results else {
+        guard let result = data, var data = result.results else {
             presenter?.filteredFail()
             return
         }
@@ -36,8 +36,15 @@ class HomeInteractor: HomePresenterToInteractorProtocol{
         case .genre:
             break
         case .price:
-            break
+            let filteredArray = data.sorted(by: { (first, second) -> Bool in
+                let firstPrice = first.trackPrice ?? 0.0
+                let secondPrice = second.trackPrice ?? 0.0
+                return firstPrice.isLess(than: secondPrice)
+            })
+            var object = result
+            object.results = filteredArray
+            presenter?.filteredSuccess(model: object)
         }
-        presenter?.filteredSuccess(model: result)
+  
     }
 }
