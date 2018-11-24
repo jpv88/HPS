@@ -26,15 +26,29 @@ class HomeInteractor: HomePresenterToInteractorProtocol{
     }
     
     func filter(by: FilterModel) {
-        guard let result = data, var data = result.results else {
+        guard let result = data, let data = result.results else {
             presenter?.filteredFail()
             return
         }
         switch by {
         case .duration:
-            break
+            let filteredArray = data.sorted(by: { (first, second) -> Bool in
+                let firstDuration = first.trackTimeMillis ?? 0
+                let secondDuration = second.trackTimeMillis ?? 0
+                return (firstDuration < secondDuration)
+            })
+            var object = result
+            object.results = filteredArray
+            presenter?.filteredSuccess(model: object)
         case .genre:
-            break
+            let filteredArray = data.sorted(by: { (first, second) -> Bool in
+                let firstGenre = first.primaryGenreName ?? ""
+                let secondGenre = second.primaryGenreName ?? ""
+                return (firstGenre == secondGenre)
+            })
+            var object = result
+            object.results = filteredArray
+            presenter?.filteredSuccess(model: object)
         case .price:
             let filteredArray = data.sorted(by: { (first, second) -> Bool in
                 let firstPrice = first.trackPrice ?? 0.0
