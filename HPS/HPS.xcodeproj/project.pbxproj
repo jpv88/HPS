@@ -35,6 +35,7 @@
 		7FFC8E9121A9B2750074813E /* ItunesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E8F21A9B2750074813E /* ItunesTableViewCell.swift */; };
 		7FFC8E9221A9B2750074813E /* ItunesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFC8E9021A9B2750074813E /* ItunesTableViewCell.xib */; };
 		7FFC8E9421A9B58E0074813E /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E9321A9B58E0074813E /* UITableViewCell+Identifier.swift */; };
+		7FFC8E9621A9C71F0074813E /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC8E9521A9C71F0074813E /* TimeInterval.swift */; };
 		E2BC3F7CF2261E83F69D6F93 /* Pods_HPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA34B0CD456096F65212DB8 /* Pods_HPS.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		7FFC8E8F21A9B2750074813E /* ItunesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesTableViewCell.swift; sourceTree = "<group>"; };
 		7FFC8E9021A9B2750074813E /* ItunesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItunesTableViewCell.xib; sourceTree = "<group>"; };
 		7FFC8E9321A9B58E0074813E /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
+		7FFC8E9521A9C71F0074813E /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		DD7C88BCB7683ECAEE381EB2 /* Pods-HPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPS/Pods-HPS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +202,7 @@
 				7FFC8E8A21A9A9990074813E /* UIApplication+TopViewController.swift */,
 				7FFC8E8C21A9AA0C0074813E /* UIViewController+ActivityIndicator.swift */,
 				7FFC8E9321A9B58E0074813E /* UITableViewCell+Identifier.swift */,
+				7FFC8E9521A9C71F0074813E /* TimeInterval.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FFC8E5321A873EB0074813E /* HomeViewController.swift in Sources */,
+				7FFC8E9621A9C71F0074813E /* TimeInterval.swift in Sources */,
 				7FFC8E9121A9B2750074813E /* ItunesTableViewCell.swift in Sources */,
 				7FFC8E6321A879080074813E /* DetailProtocols.swift in Sources */,
 				7FFC8E8921A9A9450074813E /* ErrorHandler.swift in Sources */,

@@ -64,13 +64,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let object = results[indexPath.row]
         let song = object.trackCensoredName ?? ""
         let artist = object.artistName ?? ""
-        let duration = object.trackTimeMillis ?? 0
+        var duration = "0"
+        if let miliseconds = object.trackTimeMillis, miliseconds != 0 {
+            duration = TimeInterval(miliseconds).stringTime
+        }
         let genre = object.primaryGenreName ?? ""
         let price = object.trackPrice ?? 0.0
         cell.displayData(song: song, artist: artist, duration: "\(duration)", genre: genre, price: "\(price)")
         return cell
     }
-    
     
 }
 
