@@ -49,20 +49,29 @@
                         <constraint firstAttribute="height" constant="30" id="idC-7g-VIs"/>
                     </constraints>
                     <state key="normal" title="Duration"/>
+                    <connections>
+                        <action selector="filterBy:" destination="-1" eventType="touchUpInside" id="Sfk-9O-ahY"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqt-pk-2dk" userLabel="GenreButton">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqt-pk-2dk" userLabel="GenreButton">
                     <rect key="frame" x="171" y="86.5" width="42" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="zHi-Uj-z7K"/>
                     </constraints>
                     <state key="normal" title="Genre"/>
+                    <connections>
+                        <action selector="filterBy:" destination="-1" eventType="touchUpInside" id="PEm-sf-YXu"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uri-9U-Vsw" userLabel="PriceButton">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uri-9U-Vsw" userLabel="PriceButton">
                     <rect key="frame" x="228" y="86.5" width="35" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="rhf-Oc-7VM"/>
                     </constraints>
                     <state key="normal" title="Price"/>
+                    <connections>
+                        <action selector="filterBy:" destination="-1" eventType="touchUpInside" id="JgB-01-7iY"/>
+                    </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2gv-wE-iYg">
                     <rect key="frame" x="0.0" y="127" width="375" height="540"/>

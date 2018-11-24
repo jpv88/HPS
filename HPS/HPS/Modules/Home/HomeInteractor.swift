@@ -24,4 +24,20 @@ class HomeInteractor: HomePresenterToInteractorProtocol{
             self.presenter?.fetchFail(error: error)
         }
     }
+    
+    func filter(by: FilterModel) {
+        guard let result = data, let _ = result.results else {
+            presenter?.filteredFail()
+            return
+        }
+        switch by {
+        case .duration:
+            break
+        case .genre:
+            break
+        case .price:
+            break
+        }
+        presenter?.filteredSuccess(model: result)
+    }
 }

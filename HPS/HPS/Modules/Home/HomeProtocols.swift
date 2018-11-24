@@ -17,11 +17,14 @@ protocol HomePresenterToViewProtocol: class{
 protocol HomeInteractorToPresenterProtocol: class{
     func fetchSuccess(model: ItunesSearchServiceModel)
     func fetchFail(error: Error)
+    func filteredSuccess(model: ItunesSearchServiceModel)
+    func filteredFail()
 }
 
 protocol HomePresenterToInteractorProtocol: class{
     var presenter: HomeInteractorToPresenterProtocol? {get set}
     func fetchArtist(input: String)
+    func filter(by: FilterModel)
 }
 
 protocol HomeViewToPresenterProtocol: class{
@@ -31,6 +34,7 @@ protocol HomeViewToPresenterProtocol: class{
     func loadView()
     func updateView()
     func search(input: String)
+    func filterBy(sender: UIButton)
 }
 
 protocol HomePresenterToRouterProtocol: class{

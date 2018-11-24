@@ -29,6 +29,10 @@ class HomeViewController: UIViewController {
         presenter?.updateView()
     }
     
+    @IBAction func filterBy(_ sender: UIButton) {
+        presenter?.filterBy(sender: sender)
+    }
+    
 }
 
 extension HomeViewController: UISearchBarDelegate {

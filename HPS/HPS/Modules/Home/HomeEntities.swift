@@ -8,4 +8,8 @@
 
 import UIKit
 
-struct HomeModel{}
+enum FilterModel: Int {
+    case duration = 0
+    case genre
+    case price
+}

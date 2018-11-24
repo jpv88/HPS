@@ -32,6 +32,25 @@ class HomePresenter: HomeViewToPresenterProtocol {
         interactor?.fetchArtist(input: input)
     }
     
+    func filterBy(sender: UIButton) {
+        if let filter = FilterModel(rawValue: sender.tag) {
+            showSpinner()
+            interactor?.filter(by: filter)
+        }
+    }
+    
+    private func showSpinner() {
+        if let vc = view as? UIViewController {
+            vc.showLoader()
+        }
+    }
+    
+    private func hideSpinner() {
+        if let vc = view as? UIViewController {
+            vc.hideLoader()
+        }
+    }
+    
 }
 
 extension HomePresenter: HomeInteractorToPresenterProtocol {
@@ -41,5 +60,14 @@ extension HomePresenter: HomeInteractorToPresenterProtocol {
     
     func fetchFail(error: Error) {
         ErrorHandler.showError(error: error)
+    }
+    
+    func filteredSuccess(model: ItunesSearchServiceModel) {
+        hideSpinner()
+        view?.refreshView(model: model)
+    }
+    
+    func filteredFail() {
+        hideSpinner()
     }
 }
