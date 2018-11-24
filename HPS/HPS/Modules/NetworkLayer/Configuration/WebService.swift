@@ -9,46 +9,67 @@
 import Foundation
 import Alamofire
 
+enum MyCustomError: Error {
+    case NotParsedModel(String)
+}
+
 class WebService {
     
-    func loadFromWebService<T>(type: T.Type, endpoint: Endpoint) -> T? {
-        let request = endpoint.getRequest      
-        return nil
+    private let decoder = JSONDecoder()
+    
+    init() {
+        decoder.dateDecodingStrategy = .deferredToDate
     }
     
-    class func loadFromWebService() {
+    func loadFromWebService<T>(type: T.Type, endpoint: Endpoint, completionHandler: @escaping (ItunesSearchServiceModel) -> Void, errorHandler: @escaping (Error) -> Void) {
+        // show indicator
+        let myRequest = endpoint.getRequest
+
+        Alamofire.request(myRequest.path, method: myRequest.method, parameters: myRequest.parameters, encoding: JSONEncoding.default, headers: Constant.Base.headers).responseJSON { response in
+            // hide indicator
+            switch response.result {
+            case .success( _):
+                do {
+                    if let data = response.data, let object = try? self.decoder.decode(ItunesSearchServiceModel.self, from: data) {
+                        completionHandler(object)
+                    } else {
+                        throw MyCustomError.NotParsedModel("Model could not be parsed")
+                    }
+                }
+                catch {
+                    errorHandler(error)
+                }
+            case .failure(let error):
+                errorHandler(error)
+            }
+        }
+    }
     
-        let queryItems = [URLQueryItem(name: "term", value: "jack+johnson")]
-        let urlComps = NSURLComponents(string: "https://itunes.apple.com/search")
-        urlComps?.queryItems = queryItems
-        guard let path = urlComps?.url else {return}
-        
-        Alamofire.request(path.absoluteString, method: .post, parameters: nil,
-                          encoding: JSONEncoding.default).responseJSON { response in
-                            
-                            if let status = response.response?.statusCode {
-                                switch(status){
-                                case 200 ... 201:
-                                    print("example success")
-                                default:
-                                    print("error with response status: \(status)")
-                                }
-                            }
-                            
-                            if let result = response.result.value {
-                                let dictionary = result as! NSDictionary
-                                let jsonData: NSData = try! JSONSerialization.data(withJSONObject: dictionary, options: JSONSerialization.WritingOptions.prettyPrinted) as NSData
-                                let prettyStr = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
-                                print(prettyStr)
-                                do {
-                                    
-                                } catch _ as NSError {
-                                    
-                                }
-                                
-                                
-                            }
-        
-    }
-    }
+//    class func loadFromWebService() {
+//
+//        Alamofire.request("https://itunes.apple.com/search?term=jack+johnson", method: .post, parameters: nil,
+//                          encoding: JSONEncoding.default, headers: Constant.Base.headers).responseJSON { response in
+//
+//                            switch response.result {
+//                            case .success(let JSON):
+//                                print("Success with JSON: \(JSON)")
+//                                do {
+//                                    if let data = response.data as? Data, let obj = try? decoder.decode(ItunesSearchServiceModel.self, from: data) {
+//                                        print(obj)
+//                                    } else {
+//                                        throw MyCustomError.NotParsedModel("Model could not be parsed")
+//                                    }
+//                                }
+//                                catch {
+//                                    // return completion error
+//                                    print("Something Wrong! \(error)")
+//                                }
+//
+//                            case .failure(let error):
+//                                // return completion error
+//                                break
+//                            }
+//
+//    }
+//    }
 }

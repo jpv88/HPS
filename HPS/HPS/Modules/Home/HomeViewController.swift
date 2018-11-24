@@ -30,9 +30,13 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        WebService.loadFromWebService()
         let ws = WebService()
-        ws.loadFromWebService(type: ItunesSearchServiceModel.self, endpoint: Endpoint.term(artist: "Jack Johnson"))
+        ws.loadFromWebService(type: ItunesSearchServiceModel.self, endpoint: .term(artist: "Jack Jonhson"), completionHandler: { result in
+            print("stop")
+        }) { error in
+            print("stop")
+        }
+
     }
     
 }

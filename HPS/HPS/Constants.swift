@@ -7,9 +7,13 @@
 //
 
 import Foundation
+import Alamofire
 
 class Constant {
     struct Base {
         static let url = "https://itunes.apple.com/search"
+        static let headers: HTTPHeaders = [
+            "Content-Type": "application/json"            
+        ]
     }
 }

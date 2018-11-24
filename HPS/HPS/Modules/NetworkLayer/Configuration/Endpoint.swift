@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 enum Endpoint {
     case term(artist: String)
@@ -18,10 +19,10 @@ protocol Requestable {
     var parameters: [String: String]? { get }
 }
 
-enum HTTPMethod: String {
-    case get = "GET"
-    case post = "POST"
-}
+//enum HTTPMethod: String {
+//    case get = "GET"
+//    case post = "POST"
+//}
 
 extension Endpoint {
     var getRequest: Requestable {

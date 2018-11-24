@@ -8,6 +8,20 @@
 
 import Foundation
 
-struct ItunesSearchServiceModel {
-    
+import Foundation
+
+struct ItunesSearchServiceModel: Codable {
+    let resultCount: Int?
+    let results: [Result]?
+}
+
+struct Result: Codable {
+    let wrapperType: String?
+    let kind: String?
+    let artistId, collectionId, trackId: Int?
+    let artistName: String?
+    let collectionName, trackName, collectionCensoredName, trackCensoredName: String?
+    let artistViewUrl, collectionViewUrl, trackViewUrl: String?
+    let previewUrl: String?
+    let artworkUrl30, artworkUrl60, artworkUrl100: String?
 }
