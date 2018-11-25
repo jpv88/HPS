@@ -26,4 +26,12 @@ class DetailRouter: DetailPresenterToRouterProtocol{
         
         return view
     }
+    
+    func navigateToShare(url: URL, origin: UIViewController) {
+        let message = "My Favourite Song to Share"
+        let objectsToShare = [message,url] as [Any]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+        origin.present(activityVC, animated: true, completion: nil)
+    }
 }

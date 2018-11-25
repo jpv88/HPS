@@ -36,4 +36,5 @@ protocol DetailViewToPresenterProtocol: class{
 
 protocol DetailPresenterToRouterProtocol: class{
     static func createModule(model: ItunesSearchServiceModel, position: Int) -> UIViewController
+    func navigateToShare(url: URL, origin: UIViewController)
 }
