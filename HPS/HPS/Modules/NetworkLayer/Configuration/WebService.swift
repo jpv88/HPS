@@ -21,7 +21,7 @@ class WebService {
         decoder.dateDecodingStrategy = .deferredToDate
     }
     
-    func loadFromWebService<T>(type: T.Type, endpoint: Endpoint, completionHandler: @escaping (ItunesSearchServiceModel) -> Void, errorHandler: @escaping (Error) -> Void) {
+    func loadFromWebService<T>(type: T.Type, endpoint: Endpoint, completionHandler: @escaping (T) -> Void, errorHandler: @escaping (Error) -> Void) where T: Decodable {
         
         let vc = UIApplication.topViewController()
         vc?.showLoader()
@@ -35,7 +35,7 @@ class WebService {
             switch response.result {
             case .success( _):
                 do {
-                    if let data = response.data, let object = try? self.decoder.decode(ItunesSearchServiceModel.self, from: data) {
+                    if let data = response.data, let object = try? self.decoder.decode(T.self, from: data) {
                         completionHandler(object)
                     } else {
                         throw MyCustomError.NotParsedModel("Model could not be parsed")
