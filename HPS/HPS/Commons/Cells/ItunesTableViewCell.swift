@@ -27,7 +27,7 @@ class ItunesTableViewCell: UITableViewCell {
         let artist = model.artistName ?? ""
         var duration = "0"
         if let miliseconds = model.trackTimeMillis, miliseconds != 0 {
-            duration = TimeInterval(miliseconds).stringTime
+            duration = TimeInterval(miliseconds).getString()
         }
         let genre = model.primaryGenreName ?? ""
         let price = model.trackPrice ?? 0.0
