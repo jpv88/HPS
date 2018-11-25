@@ -19,7 +19,7 @@ class DetailPresenter: DetailViewToPresenterProtocol {
     var position: Int?
     
     func loadView() {
-        setUIWithArtist()
+        setUpUIWithArtist()
     }
     
     func leftAction() {
@@ -30,7 +30,7 @@ class DetailPresenter: DetailViewToPresenterProtocol {
             } else {
                 self.position = position - 1
             }
-            setUIWithArtist()
+            setUpUIWithArtist()
             playAction()
         }
     }
@@ -61,7 +61,7 @@ class DetailPresenter: DetailViewToPresenterProtocol {
             } else {
                 self.position = position + 1
             }
-            setUIWithArtist()
+            setUpUIWithArtist()
             playAction()
         }
     }
@@ -75,7 +75,7 @@ class DetailPresenter: DetailViewToPresenterProtocol {
         }
     }
     
-    private func setUIWithArtist() {
+    private func setUpUIWithArtist() {
         if let result = data?.results, let position = position {
             view?.songTitleLabel.text = result[position].trackCensoredName ?? ""
         }
