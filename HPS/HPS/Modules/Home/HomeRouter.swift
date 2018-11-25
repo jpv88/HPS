@@ -24,4 +24,8 @@ class HomeRouter: HomePresenterToRouterProtocol{
         
         return view
     }
+    
+    func navigateToDetail(model: ItunesSearchServiceModel, position: Int, origin: UIViewController) {
+        origin.navigationController?.pushViewController(DetailRouter.createModule(model: model, position: position), animated: true)
+    }
 }

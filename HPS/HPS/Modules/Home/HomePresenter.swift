@@ -51,6 +51,12 @@ class HomePresenter: HomeViewToPresenterProtocol {
         }
     }
     
+    func navigateToDetail(model: ItunesSearchServiceModel, position: Int) {
+        if let vc = view as? UIViewController {
+            router?.navigateToDetail(model: model, position: position, origin: vc)
+        }
+    }
+    
 }
 
 extension HomePresenter: HomeInteractorToPresenterProtocol {

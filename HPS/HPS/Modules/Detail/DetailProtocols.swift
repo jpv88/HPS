@@ -20,9 +20,11 @@ protocol DetailViewToPresenterProtocol: class{
     var view: DetailPresenterToViewProtocol? {get set}
     var interactor: DetailPresenterToInteractorProtocol? {get set}
     var router: DetailPresenterToRouterProtocol? {get set}
+    var data: ItunesSearchServiceModel? {get set}
+    var position: Int? {get set}
     func loadView()
 }
 
 protocol DetailPresenterToRouterProtocol: class{
-    static func createModule() -> UIViewController
+    static func createModule(model: ItunesSearchServiceModel, position: Int) -> UIViewController
 }

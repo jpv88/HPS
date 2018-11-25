@@ -14,6 +14,9 @@ class DetailPresenter: DetailViewToPresenterProtocol {
     var interactor: DetailPresenterToInteractorProtocol?
     var router: DetailPresenterToRouterProtocol?
     
+    var data: ItunesSearchServiceModel? 
+    var position: Int?
+    
     func loadView() {
         
     }

@@ -35,8 +35,10 @@ protocol HomeViewToPresenterProtocol: class{
     func updateView()
     func search(input: String)
     func filterBy(sender: UIButton)
+    func navigateToDetail(model: ItunesSearchServiceModel, position: Int)
 }
 
 protocol HomePresenterToRouterProtocol: class{
     static func createModule() -> UIViewController
+    func navigateToDetail(model: ItunesSearchServiceModel, position: Int, origin: UIViewController)
 }

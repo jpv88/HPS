@@ -70,6 +70,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let data = data {
+            presenter?.navigateToDetail(model: data, position: indexPath.row)
+        }
+    }
+    
 }
 
 extension HomeViewController: HomePresenterToViewProtocol {
