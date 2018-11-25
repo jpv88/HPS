@@ -19,11 +19,6 @@ protocol Requestable {
     var parameters: [String: String]? { get }
 }
 
-//enum HTTPMethod: String {
-//    case get = "GET"
-//    case post = "POST"
-//}
-
 extension Endpoint {
     var getRequest: Requestable {
         switch self {
