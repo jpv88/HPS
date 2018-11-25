@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol DetailPresenterToViewProtocol: class{
     var songTitleLabel: UILabel! {get set}
+    var player: AVPlayer! {get set}
 }
 
 protocol DetailInteractorToPresenterProtocol: class{}

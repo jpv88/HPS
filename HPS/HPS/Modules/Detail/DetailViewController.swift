@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var songTitleLabel: UILabel!
     
     var presenter: DetailViewToPresenterProtocol?
+    
+    var player: AVPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()

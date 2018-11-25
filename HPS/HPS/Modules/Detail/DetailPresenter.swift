@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DetailPresenter: DetailViewToPresenterProtocol {
     
@@ -26,11 +27,21 @@ class DetailPresenter: DetailViewToPresenterProtocol {
     }
     
     func playAction() {
-        
+        if let result = data?.results, let position = position, let vc = view as? UIViewController {
+            if let videoURL = URL(string: result[position].previewUrl ?? "") {
+                view?.player = AVPlayer(url: videoURL)
+                let playerLayer = AVPlayerLayer(player: view?.player)
+                playerLayer.frame = CGRect.zero
+                vc.view.layer.addSublayer(playerLayer)
+                view?.player.play()
+            }
+        }
     }
     
     func stopAction() {
-        
+        if let player = view?.player {
+            player.pause()
+        }
     }
     
     func rightAction() {
