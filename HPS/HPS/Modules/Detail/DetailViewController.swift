@@ -45,6 +45,10 @@ class DetailViewController: UIViewController {
         presenter?.rightAction()
     }
     
+    @IBAction func shareButton(_ sender: UIButton) {
+        presenter?.shareAction()
+    }
+    
 }
 
 extension DetailViewController: DetailPresenterToViewProtocol {}

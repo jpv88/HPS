@@ -29,7 +29,7 @@ class DetailPresenter: DetailViewToPresenterProtocol {
                 self.position = elements - 1
             } else {
                 self.position = position - 1
-            }            
+            }
             setUIWithArtist()
             playAction()
         }
@@ -63,6 +63,19 @@ class DetailPresenter: DetailViewToPresenterProtocol {
             }
             setUIWithArtist()
             playAction()
+        }
+    }
+    
+    func shareAction() {
+        if let result = data?.results, let position = position, let vc = view as? UIViewController {
+            if let videoURL = URL(string: result[position].previewUrl ?? "") {
+                stopAction()
+                let message = "My Favourite Song to Share"
+                let objectsToShare = [message,videoURL] as [Any]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+                vc.present(activityVC, animated: true, completion: nil)
+            }
         }
     }
     

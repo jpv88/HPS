@@ -100,15 +100,28 @@
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBd-Vt-v76">
+                    <rect key="frame" x="167.5" y="617" width="40" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="NZ0-hk-fSq"/>
+                        <constraint firstAttribute="height" constant="30" id="oaf-rc-MBq"/>
+                    </constraints>
+                    <state key="normal" title="Share"/>
+                    <connections>
+                        <action selector="shareButton:" destination="-1" eventType="touchUpInside" id="aby-DJ-deC"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="nfe-CX-KdE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="1SD-uv-gXc"/>
+                <constraint firstItem="SBd-Vt-v76" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Anh-tu-7mk"/>
                 <constraint firstItem="HJr-Ho-YUn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="DJv-G9-xox"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nfe-CX-KdE" secondAttribute="trailing" constant="16" id="Eyk-U4-aid"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HJr-Ho-YUn" secondAttribute="trailing" constant="16" id="HOJ-Rp-CJy"/>
                 <constraint firstItem="Wu0-w1-Ibv" firstAttribute="top" secondItem="HJr-Ho-YUn" secondAttribute="bottom" constant="50" id="Qja-FC-v8k"/>
                 <constraint firstItem="HJr-Ho-YUn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="bvG-O3-Wqk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SBd-Vt-v76" secondAttribute="bottom" constant="20" id="hdM-bx-ica"/>
                 <constraint firstItem="Wu0-w1-Ibv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="i8H-YN-cUy"/>
                 <constraint firstItem="nfe-CX-KdE" firstAttribute="top" secondItem="Wu0-w1-Ibv" secondAttribute="bottom" constant="25" id="jkp-QZ-wVy"/>
             </constraints>

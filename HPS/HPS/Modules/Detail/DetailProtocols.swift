@@ -31,6 +31,7 @@ protocol DetailViewToPresenterProtocol: class{
     func playAction()
     func stopAction()
     func rightAction()
+    func shareAction()
 }
 
 protocol DetailPresenterToRouterProtocol: class{
