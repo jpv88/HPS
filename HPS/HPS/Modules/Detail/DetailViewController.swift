@@ -20,6 +20,12 @@ class DetailViewController: UIViewController {
         presenter?.loadView()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        presenter?.stopAction()
+    }
+    
     @IBAction func playerLeftButton(_ sender: UIButton) {
         presenter?.leftAction()
     }

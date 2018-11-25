@@ -84,12 +84,15 @@
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wu0-w1-Ibv" userLabel="SongTitleLabel">
                     <rect key="frame" x="146.5" y="218" width="82" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="82" id="rF5-T4-cNS"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfe-CX-KdE" userLabel="SongTitleTextLabel">
-                    <rect key="frame" x="16" y="304" width="343" height="21"/>
+                    <rect key="frame" x="16" y="264" width="343" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="5Sb-te-hXu"/>
                     </constraints>
@@ -107,7 +110,7 @@
                 <constraint firstItem="Wu0-w1-Ibv" firstAttribute="top" secondItem="HJr-Ho-YUn" secondAttribute="bottom" constant="50" id="Qja-FC-v8k"/>
                 <constraint firstItem="HJr-Ho-YUn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="bvG-O3-Wqk"/>
                 <constraint firstItem="Wu0-w1-Ibv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="i8H-YN-cUy"/>
-                <constraint firstItem="nfe-CX-KdE" firstAttribute="top" secondItem="Wu0-w1-Ibv" secondAttribute="bottom" constant="65" id="jkp-QZ-wVy"/>
+                <constraint firstItem="nfe-CX-KdE" firstAttribute="top" secondItem="Wu0-w1-Ibv" secondAttribute="bottom" constant="25" id="jkp-QZ-wVy"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>

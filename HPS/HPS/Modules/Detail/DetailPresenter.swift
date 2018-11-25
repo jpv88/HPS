@@ -39,7 +39,7 @@ class DetailPresenter: DetailViewToPresenterProtocol {
     
     private func setUIWithArtist() {
         if let result = data?.results, let position = position {
-            view?.songTitleLabel.text = result[position].artistName ?? ""
+            view?.songTitleLabel.text = result[position].trackCensoredName ?? ""
         }
     }
 }
