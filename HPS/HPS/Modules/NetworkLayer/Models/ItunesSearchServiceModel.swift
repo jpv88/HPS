@@ -27,7 +27,4 @@ struct Result: Codable {
     let trackPrice: Double?
     let primaryGenreName: String?
     let trackTimeMillis: Int?
-//    lazy var isSelected: Bool? = {
-//        return false
-//    }()
 }

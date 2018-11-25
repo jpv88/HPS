@@ -14,10 +14,14 @@ protocol DetailPresenterToViewProtocol: class{
     var player: AVPlayer! {get set}
 }
 
-protocol DetailInteractorToPresenterProtocol: class{}
+protocol DetailInteractorToPresenterProtocol: class{
+    func playerUpdated(newPosition: Int)
+}
 
 protocol DetailPresenterToInteractorProtocol: class{
     var presenter: DetailInteractorToPresenterProtocol? {get set}
+    func left(position: Int, elements: Int)
+    func right(position: Int, elements: Int)
 }
 
 protocol DetailViewToPresenterProtocol: class{

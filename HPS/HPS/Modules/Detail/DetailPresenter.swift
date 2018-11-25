@@ -19,25 +19,23 @@ class DetailPresenter: DetailViewToPresenterProtocol {
     var position: Int?
     
     func loadView() {
+        if let result = data?.results, let position = position, let videoURL = URL(string: result[position].previewUrl ?? "") {
+            view?.player = AVPlayer(url: videoURL)
+        }
         setUpUIWithArtist()
     }
     
     func leftAction() {
         if let position = self.position, let elements = data?.resultCount {
             stopAction()
-            if position == 0 {
-                self.position = elements - 1
-            } else {
-                self.position = position - 1
-            }
-            setUpUIWithArtist()
-            playAction()
+            interactor?.left(position: position, elements: elements)
         }
     }
     
     func playAction() {
         if let result = data?.results, let position = position, let vc = view as? UIViewController {
             if let videoURL = URL(string: result[position].previewUrl ?? "") {
+                stopAction()
                 view?.player = AVPlayer(url: videoURL)
                 let playerLayer = AVPlayerLayer(player: view?.player)
                 playerLayer.frame = CGRect.zero
@@ -56,13 +54,7 @@ class DetailPresenter: DetailViewToPresenterProtocol {
     func rightAction() {
         if let position = self.position, let elements = data?.resultCount {
             stopAction()
-            if position == elements - 1 {
-                self.position = 0
-            } else {
-                self.position = position + 1
-            }
-            setUpUIWithArtist()
-            playAction()
+            interactor?.right(position: position, elements: elements)
         }
     }
     
@@ -82,4 +74,10 @@ class DetailPresenter: DetailViewToPresenterProtocol {
     }
 }
 
-extension DetailPresenter: DetailInteractorToPresenterProtocol {}
+extension DetailPresenter: DetailInteractorToPresenterProtocol {
+    func playerUpdated(newPosition: Int) {
+        self.position = newPosition
+        setUpUIWithArtist()
+        playAction()
+    }
+}
