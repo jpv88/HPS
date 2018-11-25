@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol DetailPresenterToViewProtocol: class{}
+protocol DetailPresenterToViewProtocol: class{
+    var songTitleLabel: UILabel! {get set}
+}
 
 protocol DetailInteractorToPresenterProtocol: class{}
 
@@ -23,6 +25,10 @@ protocol DetailViewToPresenterProtocol: class{
     var data: ItunesSearchServiceModel? {get set}
     var position: Int? {get set}
     func loadView()
+    func leftAction()
+    func playAction()
+    func stopAction()
+    func rightAction()
 }
 
 protocol DetailPresenterToRouterProtocol: class{

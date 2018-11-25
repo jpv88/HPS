@@ -18,7 +18,29 @@ class DetailPresenter: DetailViewToPresenterProtocol {
     var position: Int?
     
     func loadView() {
+        setUIWithArtist()
+    }
+    
+    func leftAction() {
         
+    }
+    
+    func playAction() {
+        
+    }
+    
+    func stopAction() {
+        
+    }
+    
+    func rightAction() {
+        
+    }
+    
+    private func setUIWithArtist() {
+        if let result = data?.results, let position = position {
+            view?.songTitleLabel.text = result[position].artistName ?? ""
+        }
     }
 }
 
