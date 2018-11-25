@@ -23,7 +23,16 @@ class DetailPresenter: DetailViewToPresenterProtocol {
     }
     
     func leftAction() {
-        
+        if let position = self.position, let elements = data?.resultCount {
+            stopAction()
+            if position == 0 {
+                self.position = elements - 1
+            } else {
+                self.position = position - 1
+            }            
+            setUIWithArtist()
+            playAction()
+        }
     }
     
     func playAction() {
@@ -45,7 +54,16 @@ class DetailPresenter: DetailViewToPresenterProtocol {
     }
     
     func rightAction() {
-        
+        if let position = self.position, let elements = data?.resultCount {
+            stopAction()
+            if position == elements - 1 {
+                self.position = 0
+            } else {
+                self.position = position + 1
+            }
+            setUIWithArtist()
+            playAction()
+        }
     }
     
     private func setUIWithArtist() {
